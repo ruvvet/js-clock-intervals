@@ -1,15 +1,38 @@
-#clock img {
+#clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
 
 }
 
+*{
+    padding:0; margin:0; box-sizing: border-box;
+}
+
+#clock img {
+    position: absolute;
+}
+
 #hour {
+    z-index: 1;
+    transition: rotate (100deg);
+
+
 
 }
 
 #minute {
+    z-index: 2;
+    transition: rotate (6deg);
+
 
 }
 
 #second {
+    z-index: 3;
+    transition: rotate (10deg);
+
 
 }
