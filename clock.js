@@ -1,21 +1,20 @@
 time = () => {
+    let date = new Date();
+    let s = date.getSeconds();
+    let m = date.getMinutes();
+    let h = date.getHours();
 
-    let deg = 0;
+    document.querySelector('#second').style.transform = "rotate(" + s + "deg)";
+    document.querySelector('#minute').style.transform = "rotate(" + m + "deg)";
+    document.querySelector('#hour').style.transform = "rotate(" + h + "deg)";
 
-    rotate = (deg) => {
-        r = deg*((2 * Math.PI) /12)
-        return r++
-    }
+    // while (r<60) {
+    //     r++;
+    //     document.querySelector('#second').style.transform = "rotate(" + (r) + "deg)";
 
+    // }
 
-
-    let seconds = setInterval(rotate(deg), 1000);
-    console.log(seconds);
-
-    //Date.get
-
-
-
+    requestAnimationFrame(time);
 
 
 }
